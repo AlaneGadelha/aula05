@@ -1,0 +1,35 @@
+USE cadastrodb;
+
+create table cardapiogg(
+Title VARCHAR(255),
+URL VARCHAR (300),
+Descricao VARCHAR (300),
+Price REAL
+);
+
+insert into cardapiogg(
+Title, URL, Descricao, Price
+) 
+values('Sushi de abacate e pepino', 'https://laferretti.com.br/wp-content/uploads/2019/04/12345678910-985x515.jpg', 'Cubos de tofu marinados em um molho cítrico 
+            de alho e limão, grelhados até ficarem dourados e 
+            servidos com uma guarnição de salada fresca de rúcula, 
+            tomate cereja e azeitonas pretas', 35),
+            ( 'Tofu grelhado com molho de alho e limão', 'https://cdn.vidaativa.pt/uploads/2020/01/tofu-grelhado-com-vegetais.jpg',
+            'Cubos de tofu marinados em um molho cítrico 
+            de alho e limão, grelhados até ficarem dourados e 
+            servidos com uma guarnição de salada fresca de rúcula, 
+            tomate cereja e azeitonas pretas.', 50),
+            ('Risoto de cogumelos do mar', 'https://s2.glbimg.com/S_ijXoXzhHB9TKauiwXAaPhHlVI=/smart/e.glbimg.com/og/ed/f/original/2017/02/03/la_nave_risoto_navegante_de_frutos_do_mar_foto_rodrigo_azevedo_2.jpg',
+			'Um delicioso risoto preparado com cogumelos variados, 
+            como shiitake e cogumelos ostra, para imitar os sabores do mar. 
+            Finalizado com um toque de algas marinhas picadas e servido com 
+            uma pitada de limo', 47),
+            ('Sonomomo', 'https://muellerjoinville.com.br/wp-content/uploads/2023/04/mini-menor17.jpg', 
+            'exemplo de conservação das hortaliças sazonais, associando o vinagre (ácido acético) 
+            com açúcar (sacarose), conhecido como a harmonização do agridoce, técnica culinária 
+            modificando a textura, sabor e maior vida útil em relação ao pepino e o pseudofruto de caju in natura', 28
+            );
+
+select * from cardapiogg;
+
+delete from cardapiogg where Title = 'test' limit 1;
